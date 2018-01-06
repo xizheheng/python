@@ -38,13 +38,8 @@
 
 # 读取文件内容，并且内存中只保存一行.这是------推荐-----的读取文件的方法。
 # f变量代表的文件已经变成迭代器。
-#    count = 0
 #    for line in f:
-#        count += 1
-#        if count == 10:
-#            print('the tenth line')
-#            continue
-#        print(line.strip())
+#        print(line)
 #    f.close()
 
 # 文件的只写，注：一般不要只写一个'w'，因为他会删除一个已有文件的内容，但是若打开的文件是一个空文件的话，是可以的。
@@ -100,3 +95,8 @@
 # 最后在第5个字符处开始写内容,
 #    f.write('1234533333')
 #    f.close()
+
+
+# with代码块执行完毕后，自动关闭文件，对文件的操作在代码块中。
+with open('yesterday', 'r') as f:
+    pass
